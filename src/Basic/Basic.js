@@ -53,7 +53,7 @@ export default function Basic() {
                 type="number"
               />
 
-              <hr class="my-4" />
+              <hr className="my-4" />
 
               <MDBCheckbox
                 name="flexCheck"

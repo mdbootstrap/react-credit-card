@@ -1,6 +1,6 @@
 {
   "name": "@mdbootstrap/react-credit-card",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "template for mdb-react-ui-kit",
   "dependencies": {
     "mdb-react-ui-kit": "^4.0.0",
@@ -51,5 +51,5 @@
   "bugs": {
     "url": "https://github.com/mdbootstrap/react-credit-card/issues"
   },
-  "homepage": "https://github.com/mdbootstrap/react-credit-card#readme"
+  "homepage": "https://mdbootstrap.com/docs/react/extended/credit-card/"
 }

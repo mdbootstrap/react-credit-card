@@ -2,194 +2,231 @@
 
 # MDB React 5
 
-### React 17 & Bootstrap 5 & Material Design 2.0 UI KIT
+Responsive React Credit Card Form built with the latest Bootstrap 5. Free payment form design template with a credit card validation example.
 
-**[>> Get Started in 4 steps](https://mdbootstrap.com/docs/b5/react/getting-started/installation/)**
+Check out [React Credit Card Form Documentation](https://mdbootstrap.com/docs/react/extended/credit-card) for detailed instructions & even more examples.
 
-**[>> MDBReact 5 Demo](https://mdbootstrap.com/docs/b5/react#demo)**
+## Basic example
+![React Credit Card Form Basic Example](https://user-images.githubusercontent.com/108793661/184343380-c03af498-98f5-48e3-9b49-52bb2d126689.png)
+```js
+import React from "react";
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardHeader,
+  MDBCheckbox,
+  MDBCol,
+  MDBContainer,
+  MDBInput,
+  MDBRow,
+  MDBRadio,
+  MDBBtn,
+  MDBListGroup,
+  MDBListGroupItem,
+} from "mdb-react-ui-kit";
 
-<a href="https://npmcharts.com/compare/mdb-react-ui-kit?minimal=true"> <img src="https://img.shields.io/npm/dw/mdb-react-ui-kit" alt="Downloads"></a>
-<a href="https://github.com/mdbootstrap/mdb-react-ui-kit/License.pdf"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
-<a href="https://twitter.com/intent/tweet/?text=Thanks+@mdbootstrap+for+creating+amazing+and+free+Material+Design+for+Bootstrap+4+UI+KIT%20https://mdbootstrap.com/docs/jquery/&hashtags=javascript,code,webdesign,bootstrap"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Let%20us%20know%20you%20were%20here%21&"></a>
-<a href="https://www.youtube.com/watch?v=c9B4TPnak1A&t=6s"><img alt="YouTube Video Views" src="https://img.shields.io/youtube/views/c9B4TPnak1A?label=Bootstrap%205%20Tutorial%20Views&style=social"></a>
+export default function App() {
+  return (
+    <MDBContainer className="py-5">
+      <MDBRow>
+        <MDBCol md="8" className="mb-4">
+          <MDBCard className="mb-4">
+            <MDBCardHeader className="py-3">
+              <h5 className="mb-0">Biling details</h5>
+            </MDBCardHeader>
+            <MDBCardBody>
+              <MDBRow className="mb-4">
+                <MDBCol>
+                  <MDBInput label="First name" id="form1" type="text" />
+                </MDBCol>
 
----
+                <MDBCol>
+                  <MDBInput label="Last name" id="form2" type="text" />
+                </MDBCol>
+              </MDBRow>
 
-<table>
-  <tbody>
-    <tr>
-      <td>
-          <a href="https://mdbootstrap.com/docs/b5/react/" alt="Bootstrap 5" rel="dofollow">
-          		<img src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/content/en/_mdb5/standard/about/assets/mdb5-about.jpg">
-          </a>
-      </td>
-      <td>
-        <ul>
-        <li><b>500+ material UI components</b></li>
-         <li>Super simple, 1 minute installation</li>
-         <li>Detailed docs & multiple practical examples</li>
-         <li>React 17</li>
-         <li>Huge and active community</li>
-         <li><b>MIT license - free for personal & commercial use</b></li>
-        </ul>
-      </td>
-    </tr>
-   </tbody>
-</table>
+              <MDBInput
+                wrapperClass="mb-4"
+                label="Address"
+                id="form3"
+                type="text"
+              />
+              <MDBInput
+                wrapperClass="mb-4"
+                label="Email"
+                id="form4"
+                type="email"
+              />
+              <MDBInput
+                wrapperClass="mb-4"
+                label="Phone"
+                id="form5"
+                type="number"
+              />
 
-Trusted by <b>2 000 000+</b> developers & designers. Used by companies like
+              <hr class="my-4" />
 
-<table>
-  <tbody>
-    <tr>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/nike.png" style="width: 10px;"></td>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/amazon.png" style="width: 10px;"></td>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/sony.png" style="width: 10px;"></td>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/samsung.png"  style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/airbus.png" style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/yahoo.png"  style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/deloitte.png" style="height: 40px"></div>
-      <td><img src="https://mdbootstrap.com/img/logo/brands/ge.png" style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/kpmg.png" style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/unity.png" style="height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/ikea.png" style="max-height: 40px">
-      <td><img src="https://mdbootstrap.com/img/logo/brands/aegon.png" style="height: 40px">
-    </tr>
-   </tbody>
-</table>
+              <MDBCheckbox
+                name="flexCheck"
+                value=""
+                id="checkoutForm1"
+                label="Shipping address is the same as my billing address"
+              />
+              <MDBCheckbox
+                name="flexCheck"
+                value=""
+                id="checkoutForm2"
+                label=" Save this information for next time"
+                defaultChecked
+              />
 
----
+              <hr className="my-4" />
 
-###### Tutorial for the latest Bootstrap v.5 Alpha. In this video we'll learn about the changes implemented into v.5.
+              <h5 className="mb-4">Payment</h5>
 
-**[>> Click here for a written tutorial](https://mdbootstrap.com/docs/b5/react/getting-started/quick-start/)**
+              <MDBRadio
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+                label="Credit card"
+                checked
+              />
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-          		<img src="https://mdbootstrap.com/wp-content/uploads/2020/12/learnmore-1.png">
-          </a>
-      </td>
-      <td>
-          <a href="https://mdbootstrap.com/docs/b5/react/bootstrap-5-tutorial/#section-beginner" alt="Bootstrap 5" rel="dofollow">
-          		<img src="https://mdbootstrap.com/wp-content/uploads/2020/12/cover-bootstrap-5-1.png">
-          </a>
-      </td>
-    </tr>
-     <tr>
-        <td align="center">
-          <p align="center"><b>Start to Code</b></p>
-          <a href="https://mdbootstrap.com/docs/b5/react/bootstrap-5-tutorial/#section-beginner" alt="Bootstrap 5" rel="dofollow">
-          		<img src="https://mdbootstrap.com/wp-content/uploads/2020/12/Screenshot_26.png">
-          </a>
-         </td>
-        <td align="center">
-          <p align="center"><b>Learn Bootstrap 5 | Crash Course for Beginners in 1.5H</b></p>
-          <a href="https://mdbootstrap.com/docs/b5/react/bootstrap-5-tutorial/#section-beginner" alt="Bootstrap 5" rel="dofollow">
-          		<img src="https://mdbootstrap.com/wp-content/uploads/2020/12/Screenshot_26.png">
-          </a>
-         </td>
-      </tr>
-   </tbody>
-</table>
+              <MDBRadio
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                label="Debit card"
+              />
 
----
+              <MDBRadio
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                label="Paypal"
+                wrapperClass="mb-4"
+              />
 
-# Demo
+              <MDBRow>
+                <MDBCol>
+                  <MDBInput
+                    label="Name on card"
+                    id="form6"
+                    type="text"
+                    wrapperClass="mb-4"
+                  />
+                </MDBCol>
+                <MDBCol>
+                  <MDBInput
+                    label="Name on card"
+                    id="form7"
+                    type="text"
+                    wrapperClass="mb-4"
+                  />
+                </MDBCol>
+              </MDBRow>
 
-#### Simplicity and ease of use are key features of MDBReact 5 UI Kit. You need only one minute to install and run it.
+              <MDBRow>
+                <MDBCol md="3">
+                  <MDBInput
+                    label="Expiration"
+                    id="form8"
+                    type="text"
+                    wrapperClass="mb-4"
+                  />
+                </MDBCol>
+                <MDBCol md="3">
+                  <MDBInput
+                    label="CVV"
+                    id="form8"
+                    type="text"
+                    wrapperClass="mb-4"
+                  />
+                </MDBCol>
+              </MDBRow>
 
-### Buttons
+              <MDBBtn size="lg" block>
+                Continue to checkout
+              </MDBBtn>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
 
-<p>Use MDB custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+        <MDBCol md="4" className="mb-4">
+          <MDBCard className="mb-4">
+            <MDBCardHeader className="py-3">
+              <h5 className="mb-0">Summary</h5>
+            </MDBCardHeader>
+            <MDBCardBody>
+              <MDBListGroup flush>
+                <MDBListGroupItem className="d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  Products
+                  <span>$53.98</span>
+                </MDBListGroupItem>
+                <MDBListGroupItem className="d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  Shipping
+                  <span>Gratis</span>
+                </MDBListGroupItem>
+                <hr className="my-2"></hr>
+                <MDBListGroupItem className="d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  <div>
+                    <strong>Total amount</strong>
+                    <strong>
+                      <p className="mb-0">(including VAT)</p>
+                    </strong>
+                  </div>
+                  <span>
+                    <strong>$53.98</strong>
+                  </span>
+                </MDBListGroupItem>
+              </MDBListGroup>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+  );
+}
 
-<a href="https://mdbootstrap.com/docs/b5/react/components/buttons/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-buttons.gif">
-  </p>
-</a>
+```
 
-<a href="https://mdbootstrap.com/docs/b5/react/components/buttons/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-social-buttons.png">
-  </p>
-</a>
+## How to use?
 
-<a href="https://mdbootstrap.com/docs/b5/react/components/buttons/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-buttons2.png">
-  </p>
-</a>
+1. Download MDB 5 - free REACT UI KIT
 
-<a href="https://mdbootstrap.com/docs/b5/react/components/buttons/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-buttons-outline.gif">
-  </p>
-</a>
+2. Choose your favourite customized component and click on the image
 
-### Spinners
+3. Copy & paste the code into your MDB project
 
-<p>Indicate the loading state of a component or page with MDB spinners, built entirely with HTML, CSS, and no JavaScript.</p>
+[▶️ Subscribe to YouTube channel for web development tutorials & resources](https://www.youtube.com/MDBootstrap?sub_confirmation=1)
 
-<a href="https://mdbootstrap.com/docs/b5/react/components/spinners/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-loader.gif">
-  </p>
-</a>
-
-<a href="https://mdbootstrap.com/docs/b5/react/components/spinners/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-color-spinners.gif">
-  </p>
-</a>
-
-### Cards
-
-<p>A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/components/cards/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-cards.png">
-  </p>
-</a>
-
-### Footer
-
-<p>A footer is an additional navigation component. It can hold links, buttons, company info, copyrights, forms, and many other elements.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/navigation/footer/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-footer.png">
-  </p>
-</a>
-
-### Hover
-
-<p>MDB hover effect appears when the user positions the computer cursor over an element without activating it. Hover effects make a website more interactive.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/content-styles/hover-effects/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-hover.gif">
-  </p>
-</a>
-
-<a href="https://mdbootstrap.com/docs/b5/react/content-styles/hover-effects/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-hover2.png">
-  </p>
-</a>
-
-### Notes
-
-<p>Notes are small components very helpful in inserting an additional piece of information.</p>
-
-<a href="https://mdbootstrap.com/docs/b5/react/content-styles/typography/" alt="Bootstrap 5" rel="dofollow">
-  <p align="center">
-    <img src="https://mdbootstrap.com/img/Marketing/campaigns/demo-alerts.png">
-  </p>
-</a>
-
-</table>
-
-and more.
+## More extended React documentation
+<ul>
+<li><a href="https://mdbootstrap.com/docs/react/extended/code/">React Bootstrap Code</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/gallery/">React Bootstrap Gallery</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/hamburger-menu/">React Bootstrap Hamburger Menu</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/jumbotron/">React Bootstrap Jumbotron</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/maps/">React Bootstrap Maps</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/mega-menu//">React Bootstrap Mega Menu</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/media-object/">React Bootstrap Media object</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/multiselect/">React Bootstrap Multiselect</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/masonry/">React Bootstrap Masonry</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/contact/">React Bootstrap Contact form</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/gradients/">React Bootstrap Gradients</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/pagination/">React Bootstrap Pagination</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/panels/">React Bootstrap Panels</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/social-media/">React Bootstrap Social Media icons & buttons</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/search/">React Bootstrap Search</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/table-sort/">React Bootstrap Table sort</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/table-responsive/">React Bootstrap Table responsive</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/table-scroll/">React Bootstrap Table scroll</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/table-search/">React Bootstrap Table search</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/textarea/">React Bootstrap Textarea</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/sidebar/">React Bootstrap Sidebar</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/profiles/">React Bootstrap Profiles</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/dropdown-multilevel/">React Bootstrap Nested Dropdown</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/bootstrap-address-form/">React Bootstrap Address Form</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/back-to-top">React Scroll Back to Top button</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/product-cards">React Product Cards</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/avatar">React Avatar</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/carousel-with-thumbnails">React Carousel Slider with Thumbnails</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/chat">React Chat</a></li>
+<li><a href="https://mdbootstrap.com/docs/react/extended/comparison-table">React Comparison table</a></li>
+</ul>
